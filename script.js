@@ -2,7 +2,7 @@
 boton = document.querySelector(".boton")
 contenedor = document.querySelector(".contenedor")
 
-URL = "http://127.0.0.1:8000/"
+URL = "https://practica-g393.onrender.com/"
 
 
 
