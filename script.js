@@ -2,7 +2,7 @@
 boton = document.querySelector(".boton")
 contenedor = document.querySelector(".contenedor")
 
-URL = "https://practica-g393.onrender.com/"
+URL = "https://practica-1-pj9w.onrender.com/"
 
 
 
