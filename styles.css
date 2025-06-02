@@ -1,0 +1,32 @@
+body{
+    margin: auto;
+}
+
+.contenedor{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:#D3D3D3;
+    padding: 2rem;
+    margin:1rem;
+    height: 50%;
+    
+}
+
+
+
+.contenedorcito{
+    padding: 1rem;
+    height: 80%;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    gap: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: white;
+    border-radius: 1%;
+}
