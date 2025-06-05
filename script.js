@@ -70,10 +70,10 @@ formulario.addEventListener("submit", function(event){
     
 
 
-    const nombre = document.querySelector(".nombreProducto").value
-    const precio = document.querySelector(".precioProducto").value
+    let nombre = document.querySelector(".nombreProducto").value
+    let precio = document.querySelector(".precioProducto").value
     precio= parseInt(precio)///lo convierto en int(viene como text)
-    const stock = document.querySelector(".stockProducto").value
+    let stock = document.querySelector(".stockProducto").value
     stock = parseInt(stock)
 
 
