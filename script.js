@@ -6,6 +6,8 @@ botonForm = document.querySelector(".botonForm")
 body = document.querySelector(".body")
 
 
+inputBorrar = document.querySelector(".inputBorrar")
+botonBorrar = document.querySelector(".botonBorrar")
 
 
 URL = "https://practica-1-pj9w.onrender.com/"
@@ -80,7 +82,7 @@ formulario.addEventListener("submit", function(event){
     fetch("https://practica-1-pj9w.onrender.com/ingresar", {
         method: 'POST',
         headers: {
-            "Content-type": "application/json"
+            "Content-type": "application/json; charset=UTF-8"
         },
 
         body: JSON.stringify({ nombre, precio, stock }),
@@ -97,3 +99,31 @@ formulario.addEventListener("submit", function(event){
         
     })
 })
+
+
+
+///Hacer evento de escucha para borrar producto
+
+botonBorrar.addEventListener("click", ()=>{
+    id = inputBorrar.value
+    id = parseInt(id)
+    fetch("https://practica-1-pj9w.onrender.com/borrar", {
+        method: 'POST',
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        },
+
+        body: JSON.stringify({id}),
+
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        alert(data)
+    })
+    
+
+})
+
+
+
