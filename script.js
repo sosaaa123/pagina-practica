@@ -118,8 +118,8 @@ botonBorrar.addEventListener("click", ()=>{
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data)
-        alert(data)
+        console.log(data.mensaje)
+        alert(data.mensaje)
     })
     
 
