@@ -1,6 +1,12 @@
 
 boton = document.querySelector(".boton")
 contenedor = document.querySelector(".contenedor")
+formulario = document.querySelector(".formulario")
+botonForm = document.querySelector(".botonForm")
+body = document.querySelector(".body")
+
+
+
 
 URL = "https://practica-1-pj9w.onrender.com/"
 
@@ -50,4 +56,43 @@ boton.addEventListener("click", ()=>{
 
 
 
+})
+
+
+
+
+
+
+
+formulario.addEventListener("submit",function(event){
+    event.preventDefault()
+}, ()=>{
+
+
+    const nombre = document.querySelector(".nombreProducto").value
+    const precio = document.querySelector(".precioProducto").value
+    precio= parseInt(precio)///lo convierto en int(viene como text)
+    const stock = document.querySelector(".stockProducto").value
+    stock = parseInt(stock)
+
+
+    fetch("https://practica-1-pj9w.onrender.com/ingresar", {
+        method: 'POST',
+        headers: {
+            "Content-type": "application/json"
+        },
+
+        body: JSON.stringify({ nombre, precio, stock }),
+
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        alert("Producto agregado exitosamente")
+    })
+    .catch(error =>{
+        console.log(error);
+        alert(`parece que ha ocurrido un error: ${error}`)
+        
+    })
 })
