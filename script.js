@@ -64,9 +64,10 @@ boton.addEventListener("click", ()=>{
 
 
 
-formulario.addEventListener("submit",function(event){
+formulario.addEventListener("submit", function(event){
     event.preventDefault()
-}, ()=>{
+
+    
 
 
     const nombre = document.querySelector(".nombreProducto").value
